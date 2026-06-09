@@ -27,12 +27,12 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefin
                     [
                         {field: 'state', checkbox: true},
                         {field: 'id', title: 'ID', sortable: true},
-                        {field: 'category', title: __('Category'), operate: 'LIKE'},
-                        {field: 'code', title: __('Code'), operate: 'LIKE'},
-                        {field: 'name', title: __('Name'), operate: 'LIKE'},
+                        {field: 'category', title: __('Category'), operate: 'LIKE', searchList: {"": '全部'}, placeholder: '请输入分类'},
+                        {field: 'code', title: __('Code'), operate: 'LIKE', searchList: {"": '全部'}, placeholder: '请输入代码'},
+                        {field: 'name', title: __('Name'), operate: 'LIKE', searchList: {"": '全部'}, placeholder: '请输入名称'},
                         {field: 'description', title: __('Description'), operate: false, visible: false},
                         {field: 'sort_order', title: __('SortOrder'), sortable: true},
-                        {field: 'status', title: __('Status'), searchList: {"normal": __('Normal'), "hidden": __('Hidden')}, formatter: Table.api.formatter.status},
+                        {field: 'status', title: __('Status'), searchList: {"1": __('Normal'), "2": __('Deleted')}, formatter: Table.api.formatter.status},
                         {field: 'created_at', title: __('CreatedAt'), formatter: Table.api.formatter.datetime, operate: 'RANGE', addclass: 'datetimerange', sortable: true},
                         {field: 'updated_at', title: __('UpdatedAt'), formatter: Table.api.formatter.datetime, operate: 'RANGE', addclass: 'datetimerange', sortable: true},
                         {field: 'operate', title: __('Operate'), table: table, events: Table.api.events.operate, formatter: Table.api.formatter.operate}

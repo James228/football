@@ -10,5 +10,5 @@ return [
     'CreatedAt'   => '创建时间',
     'UpdatedAt'   => '更新时间',
     'Normal'      => '正常',
-    'Hidden'      => '隐藏',
+    'Deleted'     => '已删除',
 ];
