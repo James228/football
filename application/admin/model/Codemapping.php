@@ -10,7 +10,7 @@ class Codemapping extends Model
     protected $name = 'code_mapping';
 
     // 自动写入时间戳字段
-    protected $autoWriteTimestamp = true;
+    protected $autoWriteTimestamp = 'int';
     // 定义时间戳字段名
     protected $createTime = 'created_at';
     protected $updateTime = 'updated_at';
@@ -19,8 +19,21 @@ class Codemapping extends Model
 
     // 追加属性
     protected $append = [
+        'created_at',
+        'updated_at',
         'status_text'
     ];
+
+    // 格式化时间戳
+    public function getCreatedAtAttr($value)
+    {
+        return $value ? date('Y-m-d H:i:s', $value) : '';
+    }
+
+    public function getUpdatedAtAttr($value)
+    {
+        return $value ? date('Y-m-d H:i:s', $value) : '';
+    }
 
     // 状态列表
     public static function getStatusList()
