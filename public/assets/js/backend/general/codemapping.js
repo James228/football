@@ -27,9 +27,9 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefin
                     [
                         {field: 'state', checkbox: true},
                         {field: 'id', title: 'ID', sortable: true},
-                        {field: 'category', title: __('Category'), operate: 'LIKE', searchList: {"": '全部'}, placeholder: '请输入分类'},
-                        {field: 'code', title: __('Code'), operate: 'LIKE', searchList: {"": '全部'}, placeholder: '请输入代码'},
-                        {field: 'name', title: __('Name'), operate: 'LIKE', searchList: {"": '全部'}, placeholder: '请输入名称'},
+                        {field: 'category', title: __('Category'), operate: 'LIKE'},
+                        {field: 'code', title: __('Code'), operate: 'LIKE'},
+                        {field: 'name', title: __('Name'), operate: 'LIKE'},
                         {field: 'description', title: __('Description'), operate: false, visible: false},
                         {field: 'sort_order', title: __('SortOrder'), sortable: true},
                         {field: 'status', title: __('Status'), searchList: {"1": __('Normal'), "2": __('Deleted')}, formatter: Table.api.formatter.status},
